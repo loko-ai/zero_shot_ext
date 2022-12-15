@@ -1,0 +1,40 @@
+[
+ {
+  "name": "zs_classifier",
+  "description": "",
+  "configured": true,
+  "inputs": [
+   {
+    "id": "input",
+    "label": "input",
+    "service": "",
+    "to": "output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "output",
+    "label": "output"
+   }
+  ],
+  "options": {
+   "group": "Custom",
+   "icon": "RiTyphoonFill",
+   "click": null,
+   "values": {
+    "classes": "positive, neutral, negative"
+   },
+   "args": [
+    {
+     "name": "classes",
+     "type": "text",
+     "label": "classes",
+     "helper": "",
+     "group": "",
+     "value": "positive, neutral, negative",
+     "description": ""
+    }
+   ]
+  }
+ }
+]

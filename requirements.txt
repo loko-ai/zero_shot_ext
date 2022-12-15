@@ -1,0 +1,7 @@
+Flask
+loko-extensions
+protobuf == 3.20
+sentencepiece
+spacy
+torch
+transformers
