@@ -2,7 +2,7 @@
 <h1>Zero Shot Classifier</h1><br></html>
 
 **Zero Shot Classifier** extension performs multilingual text classification without any previous training.
-It's build on top of the <a href="https://huggingface.co/joeddav/xlm-roberta-large-xnli">xlm-roberta-large-xnli</a> model 
+It's built on top of the <a href="https://huggingface.co/joeddav/xlm-roberta-large-xnli">xlm-roberta-large-xnli</a> model 
 and allows to set the output labels directly from the block configuration:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/30443495/220967321-959526ea-8a46-4bd2-83b6-d8117adadf8d.png" width="80%" /></p>
