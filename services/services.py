@@ -1,3 +1,4 @@
+from doc.doc import zeroshot_doc
 from flask import Flask, request, jsonify
 from loko_extensions.business.decorators import extract_value_args
 from loko_extensions.model.components import Component, save_extensions, Arg
@@ -7,7 +8,8 @@ from utils.cache import FSCache
 
 app = Flask("")
 
-c = Component("zs_classifier",
+c = Component("ZeroShot CLF", icon="RiRadioButtonFill",
+              description=zeroshot_doc,
               args=[Arg(name="classes", value="positive, neutral, negative")])
 
 save_extensions([c])
