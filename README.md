@@ -54,5 +54,4 @@ In the file *config.json* you can set the **Hugging Face model**
 }
 ```
 **Note:** you can drop the **HF_TOKEN** variable if your model does not require authentication, otherwise you have to 
-<a href="https://huggingface.co/models?pipeline_tag=zero-shot-classification&sort=downloads">sign up</a> and create your 
-Access Token.  
+<a href="https://huggingface.co/join">sign up</a> and create your Access Token.  
