@@ -2,10 +2,9 @@
 <h1>Zero Shot Classifier</h1><br></html>
 
 **Zero Shot Classifier** extension performs multilingual text classification without any previous training.
-It's built on top of the <a href="https://huggingface.co/joeddav/xlm-roberta-large-xnli">xlm-roberta-large-xnli</a> model 
-and allows to set the output labels directly from the block configuration:
+It allows to set the output labels directly from the block configuration:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/30443495/220967321-959526ea-8a46-4bd2-83b6-d8117adadf8d.png" width="80%" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/30443495/233393933-92920ff8-9368-4db4-9a0a-48edc4f5a80f.png" width="80%" /></p>
 
 The first time you run your flow, the extension automatically downloads the requested model. Once the model is loaded in
 memory, output results will be faster. 
@@ -37,15 +36,23 @@ Output:
 
 ## Configuration
 
-In the file *config.json* you can choose where to mount your huggingface volume.
-All the downloaded models will be saved in this directory:
+In the file *config.json* you can set the **Hugging Face model**
+(you can find the available models <a href="https://huggingface.co/models?pipeline_tag=zero-shot-classification&sort=downloads">here</a>), your **Hugging Face token** and where to mount your 
+**Hugging Face volume** (all the downloaded models will be saved in this directory):
 
 ```
 {
   "main": {
-    "volumes": [
-      "/var/opt/loko/huggingface:/root/.cache/huggingface"
-    ]
-  }
+    "environment": {
+      "HF_TOKEN": "<insert your HF token here>",
+      "HF_MODEL": "joeddav/xlm-roberta-large-xnli"
+    },
+      "volumes": [
+        "/var/opt/huggingface:/root/.cache/huggingface"
+      ]
+    }
 }
 ```
+**Note:** you can drop the **HF_TOKEN** variable if your model does not require authentication, otherwise you have to 
+<a href="https://huggingface.co/models?pipeline_tag=zero-shot-classification&sort=downloads">sign up</a> and create your 
+Access Token.  

@@ -1,7 +1,11 @@
 {
   "main": {
-    "volumes": [
-      "/home/fulvio/.cache/huggingface:/root/.cache/huggingface"
-    ]
-  }
+    "environment": {
+      "HF_TOKEN": "<insert your HF token here>",
+      "HF_MODEL": "joeddav/xlm-roberta-large-xnli"
+    },
+      "volumes": [
+        "/var/opt/huggingface:/root/.cache/huggingface"
+      ]
+    }
 }

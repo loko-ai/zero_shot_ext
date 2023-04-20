@@ -5,3 +5,4 @@ sentencepiece
 spacy
 torch
 transformers
+loguru
